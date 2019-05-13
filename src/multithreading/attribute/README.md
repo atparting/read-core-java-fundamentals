@@ -1,0 +1,9 @@
+# 线程状态
+## 学习顺序
+1. Daemon.java
+2. Priority.java
+3. Handler.java
+## 学习内容
+1. 守护线程
+2. 线程优先级
+3. 未捕获异常处理器

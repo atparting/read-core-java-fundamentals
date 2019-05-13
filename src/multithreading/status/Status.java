@@ -29,7 +29,7 @@ public class Status {
                 try {
                     /*
                     等待状态(Waiting)
-                    等待主线程持有lock
+                    此处为等待主线程持有lock 然后由主线程唤醒
                     当一个线程等待另一个线程通知调度器一个条件时 它自己进入等待状态
                     在调用Object.wait方法或Thread.join方法
                     或者是等待java.util.concurrent库中的Lock或Condition时 就会出现这种情况
@@ -41,7 +41,9 @@ public class Status {
                 }
                 /*
                 阻塞状态(Blocked)
-                当一个线程试图获取一个内部的对象锁(而不是java.util.concurrent库中的锁) 而该锁被其他线程持有
+                主线程唤醒当前线程 但锁依然未被主线程释放
+                当一个线程试图获取一个内部的对象锁(而不是java.util.concurrent库中的锁)
+                而该锁被其他线程持有 这个线程进入阻塞状态
                 当所有其他线程释放该锁 并且线程调度器允许本线程持有它的时候 该线程将变成非阻塞状态
                  */
                 System.out.println(Thread.currentThread().getName() + " get lock, " +
