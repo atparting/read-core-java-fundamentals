@@ -5,8 +5,8 @@
 | 14.3 | 线程状态 | status |
 | 14.4 | 线程属性 | attribute |
 | 14.5 | 同步 | synchronization |
-| 14.6 | 阻塞队列 |  |
-| 14.7 | 线程安全的集合 |  |
-| 14.8 | Callable与Future |  |
-| 14.9 | 执行器 |  |
+| 14.6 | 阻塞队列 | queue |
+| 14.7 | 线程安全的集合 | collection |
+| 14.8 | Callable与Future | future |
+| 14.9 | 执行器 | executor |
 | 14.10 | 同步器 |  |
